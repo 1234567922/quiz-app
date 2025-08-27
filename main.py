@@ -1,9 +1,10 @@
+# Import necessary modules from the standard lib.
 import customtkinter as ctk
 from tkinter import messagebox
 
 ctk.set_appearance_mode("light")
 
-
+# Set of questions.
 answer =  [
     {"question": "Capital of France?", "options": ["Berlin", "Paris", "Rome"], "answer": "Paris"},
     {"question": "Red Planet?", "options": ["Earth", "Mars", "Jupiter"], "answer": "Mars"},
@@ -31,7 +32,9 @@ answer =  [
     {"question": "Who discovered gravity?", "options": ["Einstein", "Newton", "Galileo"], "answer": "Newton"},
     {"question": "Fastest land animal?", "options": ["Lion", "Cheetah", "Horse"], "answer": "Cheetah"},]
     
+# Defines the Quiz App class.
 class QuizApp(ctk.CTk):
+    # Initialise the class.
     def __init__(app):
         super().__init__()
         app.title("🧠 Quiz Master")
@@ -71,12 +74,14 @@ class QuizApp(ctk.CTk):
 
         app.load_answer()
 
+    # Load the next question, and update the text.
     def load_answer(app):
         q = answer[app.q_index]
         app.answer_label.configure(text=q["question"])
         for i, opt in enumerate(q["options"]):
             app.option_buttons[i].configure(text=opt)
 
+    # Check if the answer was correct, and award a point if it is correct.
     def check_answer(app, index):
         selected = app.option_buttons[index].cget("text")
         correct = answer[app.q_index]["answer"]
@@ -87,8 +92,8 @@ class QuizApp(ctk.CTk):
         if app.q_index < len(answer):
             app.load_answer()
         else:
-           messagebox.showinfo("Quiz Finished", f"You scored {app.score} out of {len(answer)}!")(
-        app.quit())
+           messagebox.showinfo("Quiz Finished", f"You scored {app.score} out of {len(answer)}!")
+           app.quit()
 
 app = QuizApp()
 app.mainloop()

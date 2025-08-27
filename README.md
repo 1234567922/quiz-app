@@ -1,34 +1,6 @@
-'iohpdgshvsfvwyweoweglwhegvjhfvwelwgwewevbgoergebrgeguerroguerherjglrgthrrtyeryerteeryyrtytytrrthfghhejhgerjkttgutgertb
-dfhrdfhdhdfhdfh
-hdfhdfhdf
-hdfh
-dfh
-dfh
-dfh
-df
-hdfh
+# Quiz App
+Test your general knowledge with this quiz app! This python app quizzes you on a set of general knowledge questions,
+allowing you to keep your skills and memory sharp.
 
-fh
-zh
-dfh
-f
-hf
-hfh
-
-fh
-fh
-f
-f
-h
-h
-fh
-
-df
-fdh
-555
-3
-534
-53434
-34
-6
-547
+### Requirements
+Ensure that you have python installed (version 3 or later).
